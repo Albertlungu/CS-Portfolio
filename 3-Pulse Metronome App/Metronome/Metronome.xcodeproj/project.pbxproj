@@ -1,0 +1,986 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF19A9502C41DFEB009F14CA /* MetronomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF19A94F2C41DFEB009F14CA /* MetronomeApp.swift */; };
+		AF19A9522C41DFEB009F14CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF19A9512C41DFEB009F14CA /* ContentView.swift */; };
+		AF19A9542C41DFF0009F14CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF19A9532C41DFF0009F14CA /* Assets.xcassets */; };
+		AF19A9582C41DFF0009F14CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF19A9572C41DFF0009F14CA /* Preview Assets.xcassets */; };
+		AF19A9622C41DFF0009F14CA /* MetronomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF19A9612C41DFF0009F14CA /* MetronomeTests.swift */; };
+		AF19A96C2C41DFF0009F14CA /* MetronomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF19A96B2C41DFF0009F14CA /* MetronomeUITests.swift */; };
+		AF19A96E2C41DFF0009F14CA /* MetronomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF19A96D2C41DFF0009F14CA /* MetronomeUITestsLaunchTests.swift */; };
+		AF30C07E2DBC6978007F4022 /* Perc_MetronomeQuartz_lo.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF30C07C2DBC6978007F4022 /* Perc_MetronomeQuartz_lo.wav */; };
+		AF30C07F2DBC6978007F4022 /* Perc_MetronomeQuartz_hi.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF30C07B2DBC6978007F4022 /* Perc_MetronomeQuartz_hi.wav */; };
+		AF3C121B2C45DC46003F726B /* MetronomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3C121A2C45DC46003F726B /* MetronomeView.swift */; };
+		AF3C121F2C45DCA9003F726B /* TunerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3C121E2C45DCA9003F726B /* TunerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF19A95E2C41DFF0009F14CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF19A9442C41DFEB009F14CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF19A94B2C41DFEB009F14CA;
+			remoteInfo = Metronome;
+		};
+		AF19A9682C41DFF0009F14CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF19A9442C41DFEB009F14CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF19A94B2C41DFEB009F14CA;
+			remoteInfo = Metronome;
+		};
+		AF40313E2DBAEF6000D0ED44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF19A9442C41DFEB009F14CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF4031302DBAEF5B00D0ED44;
+			remoteInfo = MetronomeTarget;
+		};
+		AF4031482DBAEF6000D0ED44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF19A9442C41DFEB009F14CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF4031302DBAEF5B00D0ED44;
+			remoteInfo = MetronomeTarget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF19A94C2C41DFEB009F14CA /* Metronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF19A94F2C41DFEB009F14CA /* MetronomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeApp.swift; sourceTree = "<group>"; };
+		AF19A9512C41DFEB009F14CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF19A9532C41DFF0009F14CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF19A9552C41DFF0009F14CA /* Metronome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Metronome.entitlements; sourceTree = "<group>"; };
+		AF19A9572C41DFF0009F14CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF19A95D2C41DFF0009F14CA /* MetronomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF19A9612C41DFF0009F14CA /* MetronomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeTests.swift; sourceTree = "<group>"; };
+		AF19A9672C41DFF0009F14CA /* MetronomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF19A96B2C41DFF0009F14CA /* MetronomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeUITests.swift; sourceTree = "<group>"; };
+		AF19A96D2C41DFF0009F14CA /* MetronomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF30C07B2DBC6978007F4022 /* Perc_MetronomeQuartz_hi.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Perc_MetronomeQuartz_hi.wav; sourceTree = "<group>"; };
+		AF30C07C2DBC6978007F4022 /* Perc_MetronomeQuartz_lo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Perc_MetronomeQuartz_lo.wav; sourceTree = "<group>"; };
+		AF3C121A2C45DC46003F726B /* MetronomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeView.swift; sourceTree = "<group>"; };
+		AF3C121E2C45DCA9003F726B /* TunerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerView.swift; sourceTree = "<group>"; };
+		AF4031312DBAEF5B00D0ED44 /* MetronomeTarget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetronomeTarget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF40313D2DBAEF6000D0ED44 /* MetronomeTargetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeTargetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF4031472DBAEF6000D0ED44 /* MetronomeTargetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeTargetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFFC5C8C2E65F91B007EA37B /* MetronomeTarget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MetronomeTarget-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF19A9492C41DFEB009F14CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF19A95A2C41DFF0009F14CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF19A9642C41DFF0009F14CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF40312E2DBAEF5B00D0ED44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF40313A2DBAEF6000D0ED44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF4031442DBAEF6000D0ED44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF19A9432C41DFEB009F14CA = {
+			isa = PBXGroup;
+			children = (
+				AFFC5C8C2E65F91B007EA37B /* MetronomeTarget-Info.plist */,
+				AF30C07D2DBC6978007F4022 /* Clicks */,
+				AF19A94E2C41DFEB009F14CA /* Metronome */,
+				AF19A9602C41DFF0009F14CA /* MetronomeTests */,
+				AF19A96A2C41DFF0009F14CA /* MetronomeUITests */,
+				AF19A94D2C41DFEB009F14CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF19A94D2C41DFEB009F14CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF19A94C2C41DFEB009F14CA /* Metronome.app */,
+				AF19A95D2C41DFF0009F14CA /* MetronomeTests.xctest */,
+				AF19A9672C41DFF0009F14CA /* MetronomeUITests.xctest */,
+				AF4031312DBAEF5B00D0ED44 /* MetronomeTarget.app */,
+				AF40313D2DBAEF6000D0ED44 /* MetronomeTargetTests.xctest */,
+				AF4031472DBAEF6000D0ED44 /* MetronomeTargetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF19A94E2C41DFEB009F14CA /* Metronome */ = {
+			isa = PBXGroup;
+			children = (
+				AF3C121E2C45DCA9003F726B /* TunerView.swift */,
+				AF3C121A2C45DC46003F726B /* MetronomeView.swift */,
+				AF19A94F2C41DFEB009F14CA /* MetronomeApp.swift */,
+				AF19A9512C41DFEB009F14CA /* ContentView.swift */,
+				AF19A9532C41DFF0009F14CA /* Assets.xcassets */,
+				AF19A9552C41DFF0009F14CA /* Metronome.entitlements */,
+				AF19A9562C41DFF0009F14CA /* Preview Content */,
+			);
+			path = Metronome;
+			sourceTree = "<group>";
+		};
+		AF19A9562C41DFF0009F14CA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AF19A9572C41DFF0009F14CA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF19A9602C41DFF0009F14CA /* MetronomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF19A9612C41DFF0009F14CA /* MetronomeTests.swift */,
+			);
+			path = MetronomeTests;
+			sourceTree = "<group>";
+		};
+		AF19A96A2C41DFF0009F14CA /* MetronomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF19A96B2C41DFF0009F14CA /* MetronomeUITests.swift */,
+				AF19A96D2C41DFF0009F14CA /* MetronomeUITestsLaunchTests.swift */,
+			);
+			path = MetronomeUITests;
+			sourceTree = "<group>";
+		};
+		AF30C07D2DBC6978007F4022 /* Clicks */ = {
+			isa = PBXGroup;
+			children = (
+				AF30C07B2DBC6978007F4022 /* Perc_MetronomeQuartz_hi.wav */,
+				AF30C07C2DBC6978007F4022 /* Perc_MetronomeQuartz_lo.wav */,
+			);
+			path = Clicks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF19A94B2C41DFEB009F14CA /* Metronome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF19A9712C41DFF0009F14CA /* Build configuration list for PBXNativeTarget "Metronome" */;
+			buildPhases = (
+				AF19A9482C41DFEB009F14CA /* Sources */,
+				AF19A9492C41DFEB009F14CA /* Frameworks */,
+				AF19A94A2C41DFEB009F14CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Metronome;
+			productName = Metronome;
+			productReference = AF19A94C2C41DFEB009F14CA /* Metronome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF19A95C2C41DFF0009F14CA /* MetronomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF19A9742C41DFF0009F14CA /* Build configuration list for PBXNativeTarget "MetronomeTests" */;
+			buildPhases = (
+				AF19A9592C41DFF0009F14CA /* Sources */,
+				AF19A95A2C41DFF0009F14CA /* Frameworks */,
+				AF19A95B2C41DFF0009F14CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF19A95F2C41DFF0009F14CA /* PBXTargetDependency */,
+			);
+			name = MetronomeTests;
+			productName = MetronomeTests;
+			productReference = AF19A95D2C41DFF0009F14CA /* MetronomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF19A9662C41DFF0009F14CA /* MetronomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF19A9772C41DFF0009F14CA /* Build configuration list for PBXNativeTarget "MetronomeUITests" */;
+			buildPhases = (
+				AF19A9632C41DFF0009F14CA /* Sources */,
+				AF19A9642C41DFF0009F14CA /* Frameworks */,
+				AF19A9652C41DFF0009F14CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF19A9692C41DFF0009F14CA /* PBXTargetDependency */,
+			);
+			name = MetronomeUITests;
+			productName = MetronomeUITests;
+			productReference = AF19A9672C41DFF0009F14CA /* MetronomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		AF4031302DBAEF5B00D0ED44 /* MetronomeTarget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF4031552DBAEF6000D0ED44 /* Build configuration list for PBXNativeTarget "MetronomeTarget" */;
+			buildPhases = (
+				AF40312D2DBAEF5B00D0ED44 /* Sources */,
+				AF40312E2DBAEF5B00D0ED44 /* Frameworks */,
+				AF40312F2DBAEF5B00D0ED44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetronomeTarget;
+			packageProductDependencies = (
+			);
+			productName = MetronomeTarget;
+			productReference = AF4031312DBAEF5B00D0ED44 /* MetronomeTarget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF40313C2DBAEF6000D0ED44 /* MetronomeTargetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF4031562DBAEF6000D0ED44 /* Build configuration list for PBXNativeTarget "MetronomeTargetTests" */;
+			buildPhases = (
+				AF4031392DBAEF6000D0ED44 /* Sources */,
+				AF40313A2DBAEF6000D0ED44 /* Frameworks */,
+				AF40313B2DBAEF6000D0ED44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF40313F2DBAEF6000D0ED44 /* PBXTargetDependency */,
+			);
+			name = MetronomeTargetTests;
+			packageProductDependencies = (
+			);
+			productName = MetronomeTargetTests;
+			productReference = AF40313D2DBAEF6000D0ED44 /* MetronomeTargetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF4031462DBAEF6000D0ED44 /* MetronomeTargetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF4031572DBAEF6000D0ED44 /* Build configuration list for PBXNativeTarget "MetronomeTargetUITests" */;
+			buildPhases = (
+				AF4031432DBAEF6000D0ED44 /* Sources */,
+				AF4031442DBAEF6000D0ED44 /* Frameworks */,
+				AF4031452DBAEF6000D0ED44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF4031492DBAEF6000D0ED44 /* PBXTargetDependency */,
+			);
+			name = MetronomeTargetUITests;
+			packageProductDependencies = (
+			);
+			productName = MetronomeTargetUITests;
+			productReference = AF4031472DBAEF6000D0ED44 /* MetronomeTargetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF19A9442C41DFEB009F14CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					AF19A94B2C41DFEB009F14CA = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					AF19A95C2C41DFF0009F14CA = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = AF19A94B2C41DFEB009F14CA;
+					};
+					AF19A9662C41DFF0009F14CA = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = AF19A94B2C41DFEB009F14CA;
+					};
+					AF4031302DBAEF5B00D0ED44 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					AF40313C2DBAEF6000D0ED44 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = AF4031302DBAEF5B00D0ED44;
+					};
+					AF4031462DBAEF6000D0ED44 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = AF4031302DBAEF5B00D0ED44;
+					};
+				};
+			};
+			buildConfigurationList = AF19A9472C41DFEB009F14CA /* Build configuration list for PBXProject "Metronome" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF19A9432C41DFEB009F14CA;
+			productRefGroup = AF19A94D2C41DFEB009F14CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF19A94B2C41DFEB009F14CA /* Metronome */,
+				AF19A95C2C41DFF0009F14CA /* MetronomeTests */,
+				AF19A9662C41DFF0009F14CA /* MetronomeUITests */,
+				AF4031302DBAEF5B00D0ED44 /* MetronomeTarget */,
+				AF40313C2DBAEF6000D0ED44 /* MetronomeTargetTests */,
+				AF4031462DBAEF6000D0ED44 /* MetronomeTargetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF19A94A2C41DFEB009F14CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF30C07E2DBC6978007F4022 /* Perc_MetronomeQuartz_lo.wav in Resources */,
+				AF30C07F2DBC6978007F4022 /* Perc_MetronomeQuartz_hi.wav in Resources */,
+				AF19A9582C41DFF0009F14CA /* Preview Assets.xcassets in Resources */,
+				AF19A9542C41DFF0009F14CA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF19A95B2C41DFF0009F14CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF19A9652C41DFF0009F14CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF40312F2DBAEF5B00D0ED44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF40313B2DBAEF6000D0ED44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF4031452DBAEF6000D0ED44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF19A9482C41DFEB009F14CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF3C121B2C45DC46003F726B /* MetronomeView.swift in Sources */,
+				AF19A9522C41DFEB009F14CA /* ContentView.swift in Sources */,
+				AF19A9502C41DFEB009F14CA /* MetronomeApp.swift in Sources */,
+				AF3C121F2C45DCA9003F726B /* TunerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF19A9592C41DFF0009F14CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF19A9622C41DFF0009F14CA /* MetronomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF19A9632C41DFF0009F14CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF19A96C2C41DFF0009F14CA /* MetronomeUITests.swift in Sources */,
+				AF19A96E2C41DFF0009F14CA /* MetronomeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF40312D2DBAEF5B00D0ED44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF4031392DBAEF6000D0ED44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF4031432DBAEF6000D0ED44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF19A95F2C41DFF0009F14CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF19A94B2C41DFEB009F14CA /* Metronome */;
+			targetProxy = AF19A95E2C41DFF0009F14CA /* PBXContainerItemProxy */;
+		};
+		AF19A9692C41DFF0009F14CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF19A94B2C41DFEB009F14CA /* Metronome */;
+			targetProxy = AF19A9682C41DFF0009F14CA /* PBXContainerItemProxy */;
+		};
+		AF40313F2DBAEF6000D0ED44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF4031302DBAEF5B00D0ED44 /* MetronomeTarget */;
+			targetProxy = AF40313E2DBAEF6000D0ED44 /* PBXContainerItemProxy */;
+		};
+		AF4031492DBAEF6000D0ED44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF4031302DBAEF5B00D0ED44 /* MetronomeTarget */;
+			targetProxy = AF4031482DBAEF6000D0ED44 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AF19A96F2C41DFF0009F14CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF19A9702C41DFF0009F14CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		AF19A9722C41DFF0009F14CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Metronome/Metronome.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Metronome/Preview Content\"";
+				DEVELOPMENT_TEAM = 4N68MTR6X7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to detect pitch for the tuner.";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = albertlungu.Metronome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF19A9732C41DFF0009F14CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Metronome/Metronome.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Metronome/Preview Content\"";
+				DEVELOPMENT_TEAM = 4N68MTR6X7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to detect pitch for the tuner.";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = albertlungu.Metronome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF19A9752C41DFF0009F14CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = albertlungu.MetronomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Metronome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Metronome";
+			};
+			name = Debug;
+		};
+		AF19A9762C41DFF0009F14CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = albertlungu.MetronomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Metronome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Metronome";
+			};
+			name = Release;
+		};
+		AF19A9782C41DFF0009F14CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = albertlungu.MetronomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Metronome;
+			};
+			name = Debug;
+		};
+		AF19A9792C41DFF0009F14CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = albertlungu.MetronomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Metronome;
+			};
+			name = Release;
+		};
+		AF40314F2DBAEF6000D0ED44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MetronomeTarget-Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to detect pitch for the tuner.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = albertlungu.MetronomeTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF4031502DBAEF6000D0ED44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MetronomeTarget-Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to detect pitch for the tuner.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = albertlungu.MetronomeTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF4031512DBAEF6000D0ED44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = albertlungu.MetronomeTargetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetronomeTarget.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MetronomeTarget";
+			};
+			name = Debug;
+		};
+		AF4031522DBAEF6000D0ED44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = albertlungu.MetronomeTargetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetronomeTarget.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MetronomeTarget";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF4031532DBAEF6000D0ED44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = albertlungu.MetronomeTargetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MetronomeTarget;
+			};
+			name = Debug;
+		};
+		AF4031542DBAEF6000D0ED44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = albertlungu.MetronomeTargetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MetronomeTarget;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF19A9472C41DFEB009F14CA /* Build configuration list for PBXProject "Metronome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF19A96F2C41DFF0009F14CA /* Debug */,
+				AF19A9702C41DFF0009F14CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF19A9712C41DFF0009F14CA /* Build configuration list for PBXNativeTarget "Metronome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF19A9722C41DFF0009F14CA /* Debug */,
+				AF19A9732C41DFF0009F14CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF19A9742C41DFF0009F14CA /* Build configuration list for PBXNativeTarget "MetronomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF19A9752C41DFF0009F14CA /* Debug */,
+				AF19A9762C41DFF0009F14CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF19A9772C41DFF0009F14CA /* Build configuration list for PBXNativeTarget "MetronomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF19A9782C41DFF0009F14CA /* Debug */,
+				AF19A9792C41DFF0009F14CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF4031552DBAEF6000D0ED44 /* Build configuration list for PBXNativeTarget "MetronomeTarget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF40314F2DBAEF6000D0ED44 /* Debug */,
+				AF4031502DBAEF6000D0ED44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF4031562DBAEF6000D0ED44 /* Build configuration list for PBXNativeTarget "MetronomeTargetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF4031512DBAEF6000D0ED44 /* Debug */,
+				AF4031522DBAEF6000D0ED44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF4031572DBAEF6000D0ED44 /* Build configuration list for PBXNativeTarget "MetronomeTargetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF4031532DBAEF6000D0ED44 /* Debug */,
+				AF4031542DBAEF6000D0ED44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF19A9442C41DFEB009F14CA /* Project object */;
+}
