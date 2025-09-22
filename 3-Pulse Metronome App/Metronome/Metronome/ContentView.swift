@@ -32,6 +32,7 @@ struct ContentView: View {
                     TunerView(isStarted: $tunerIsStarted)
                         .tag(SelectedView.tuner)
                 }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
                 // Custom tab bar
