@@ -37,7 +37,7 @@ struct ContentView: View {
 
                 // Custom tab bar
                 ZStack(alignment: .center) {
-                    RoundedRectangle(cornerRadius: 15)
+                    RoundedRectangle(cornerRadius: 22)
                         .fill(Color.secondary.opacity(0.3))
                         .frame(height: 50)
                         .overlay(
@@ -45,6 +45,7 @@ struct ContentView: View {
                                 .stroke(Color.secondary, lineWidth: 2)
                                 .blur(radius: 100)
                         )
+                        .glassEffect()
                     
                     HStack {
                         Text("Metronome")
@@ -122,10 +123,11 @@ struct ContentView: View {
                 ZStack(alignment: .center) {
                     let isStarted = (selectedView == .metronome) ? metronomeIsStarted : tunerIsStarted
                     
-                    RoundedRectangle(cornerRadius: 15)
+                    RoundedRectangle(cornerRadius: 22)
                         .fill(isStarted ? Color.red : Color.blue)
                         .frame(width: 100, height: 50)
                         .scaleEffect(scale)
+                        .glassEffect()
                         .onTapGesture {
                             withAnimation(.easeIn(duration: 0.1)) {
                                 scale = 1.2

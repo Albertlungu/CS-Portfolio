@@ -104,6 +104,7 @@ struct MetronomeView: View {
                 .scaleEffect(pulse ? 1.3 : 1.0)
                 .shadow(color: .blue.opacity(0.5), radius: pulse ? 50 : 10, x: 0, y: pulse ? 10 : 5)
                 .animation(.easeInOut(duration: beatInterval / 3), value: pulse)
+                .glassEffect()
                 .onTapGesture {
                     withAnimation { pulse.toggle() }
                     registerTap()
@@ -129,9 +130,10 @@ struct MetronomeView: View {
     private func rightSlider(in geometry: GeometryProxy) -> some View {
         VStack {
             ZStack {
-                RoundedRectangle(cornerRadius: 15)
+                RoundedRectangle(cornerRadius: 22)
                     .fill(Color.secondary.opacity(0.7))
                     .frame(width: isDraggingRight ? 40 : 30, height: 275)
+                    .glassEffect()
                     .overlay(
                         VStack(spacing: 0) {
                             Color.clear
@@ -187,8 +189,9 @@ struct MetronomeView: View {
     private func leftSlider(in geometry: GeometryProxy) -> some View {
         VStack {
             ZStack {
-                RoundedRectangle(cornerRadius: 15)
+                RoundedRectangle(cornerRadius: 22)
                     .fill(Color.secondary.opacity(0.7))
+                    .glassEffect()
                     .frame(width: isDraggingLeft ? 40 : 30, height: 275)
                     .overlay(
                         VStack(spacing: 0) {
