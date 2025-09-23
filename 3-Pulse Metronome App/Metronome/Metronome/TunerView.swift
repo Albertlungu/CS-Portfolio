@@ -141,9 +141,9 @@ struct TunerView: View {
         do {
             try audioEngine.prepare()
             try audioEngine.start()
-            print("AudioEngine started successfully")
+            print("Started Audio Engine succesfully")
         } catch {
-            print("Error starting audio engine:", error.localizedDescription)
+            print("Error starting Audio Engine", error)
         }
     }
     
