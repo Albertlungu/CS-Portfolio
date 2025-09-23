@@ -15,7 +15,7 @@ no2_results = earthaccess.search_data(
 print("Found granules:", len(no2_results))
 
 # Make sure output directory exists
-output_dir = Path("Results")
+output_dir = Path("NO2 Results")
 output_dir.mkdir(parents=True, exist_ok=True)
 
 # Download results
