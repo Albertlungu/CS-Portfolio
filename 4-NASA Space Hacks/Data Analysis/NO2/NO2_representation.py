@@ -6,11 +6,11 @@ import cartopy.feature as cfeature
 
 # Your files
 files = [
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0201_v003-2024m0307t130621.he5",
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0202_v003-2024m0307t130726.he5",
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0203_v003-2024m0306t205503.he5",
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0204_v003-2024m0306t205541.he5",
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0205_v003-2024m0307t130709.he5"
+    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0201_v003-2024m0307t130621.he5",
+    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0202_v003-2024m0307t130726.he5",
+    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0203_v003-2024m0306t205503.he5",
+    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0204_v003-2024m0306t205541.he5",
+    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0205_v003-2024m0307t130709.he5"
 ]
 
 data_list = []
