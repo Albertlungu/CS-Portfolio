@@ -4,7 +4,7 @@ DAYDREAM RAHHHHHHHHH (Eason YANG, Sebastian WU, Albert LUNGU)
 
 # The Sleepwalkers
 
-![Game Screenshot](assets/main/title_page.png)
+![Game Screenshot](assets/main/title_page_poster.png)
 
 ## Overview
 
