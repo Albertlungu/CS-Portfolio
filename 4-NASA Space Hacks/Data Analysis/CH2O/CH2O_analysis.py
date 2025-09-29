@@ -22,7 +22,7 @@ print(auth.authenticated)
 
 ch2o_results = earthaccess.search_data(
     short_name = "TEMPO_HCHO_L2",
-    count = 5
+    count = 2
 )
 
 files = earthaccess.download(granules=ch2o_results, local_path="/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/CH2O/CH2O Results")

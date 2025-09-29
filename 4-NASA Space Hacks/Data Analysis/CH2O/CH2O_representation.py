@@ -3,15 +3,10 @@ import h5netcdf
 import h5py
 import numpy as np
 import matplotlib.pyplot as plt
+import glob
 
-
-files = [
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/CH2O/CH2O Results/TEMPO_HCHO_L2_V01_20230802T151249Z_S001G01.nc",
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/CH2O/CH2O Results/TEMPO_HCHO_L2_V01_20230802T151902Z_S001G02.nc",
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/CH2O/CH2O Results/TEMPO_HCHO_L2_V01_20230802T152515Z_S001G03.nc",
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/CH2O/CH2O Results/TEMPO_HCHO_L2_V03_20230802T151249Z_S001G01.nc",
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/CH2O/CH2O Results/TEMPO_HCHO_L2_V03_20230802T151902Z_S001G02.nc"
-    ]
+folder = "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/CH2O/CH2O Results/"
+files = glob.glob(folder + "*.nc")
 
 plt.figure(figsize=(12,6))
 last_scatter = None
@@ -26,7 +21,7 @@ for f in files:
 
     ch2o = np.ma.masked_where(ch2o < 0, ch2o)
 
-    last_scatter = plt.scatter(lon, lat, c = ch2o, s = 1, cmap = 'viridis')
+    last_scatter = plt.scatter(lon, lat, c = ch2o, s = 1, cmap = 'inferno_r')
 
 # with h5py.File(file, 'r') as f:
 #     print(list(f.keys()))

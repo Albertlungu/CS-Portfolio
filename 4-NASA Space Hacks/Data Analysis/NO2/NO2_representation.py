@@ -3,15 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
+import glob
 
-# Your files
-files = [
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0201_v003-2024m0307t130621.he5",
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0202_v003-2024m0307t130726.he5",
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0203_v003-2024m0306t205503.he5",
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0204_v003-2024m0306t205541.he5",
-    "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2/NO2 Results/OMI-Aura_L3-OMNO2d_2024m0205_v003-2024m0307t130709.he5"
-]
+folder = "/Users/albertlungu/CS-Portfolio/4-NASA Space Hacks/Data Analysis/NO2/NO2 Results/"
+files = glob.glob(folder + "*.he5")
 
 data_list = []
 
@@ -28,16 +23,22 @@ stacked = np.stack(data_list, axis=0)
 mean_data = np.nanmean(stacked, axis=0)
 
 # Latitude and longitude from L3 (OMNO2d is 1x1 degree global grid)
-lat = np.arange(-89.5, 90.5, 1.0)   # 180 values
-lon = np.arange(-179.5, 180.5, 1.0) # 360 values
+# If mean_data is 720x1440
+lat = np.linspace(-89.875, 89.875, 720)
+lon = np.linspace(-179.875, 179.875, 1440)
 lon_grid, lat_grid = np.meshgrid(lon, lat)
+
+# Plot
+# Mask fill values and zeros
+mean_data_masked = np.ma.masked_where((mean_data < 0.5), mean_data)
 
 # Plot
 fig = plt.figure(figsize=(14, 7))
 ax = plt.axes(projection=ccrs.PlateCarree())
-c = ax.pcolormesh(lon_grid, lat_grid, mean_data,
+
+c = ax.pcolormesh(lon_grid, lat_grid, mean_data_masked,
                   transform=ccrs.PlateCarree(),
-                  cmap='inferno',
+                  cmap='inferno_r',   # reversed colormap
                   shading='auto')
 
 ax.add_feature(cfeature.BORDERS, linewidth=0.5)
@@ -48,7 +49,6 @@ cbar = plt.colorbar(c, orientation='vertical', shrink=0.7, pad=0.05)
 cbar.set_label("NO₂ Tropospheric Column (mol/cm²)")
 
 plt.show()
-
 # def print_structure(name, obj):
 #     print(name)
 # for idx, i in enumerate(files):

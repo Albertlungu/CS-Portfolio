@@ -9,7 +9,7 @@ print("Authenticated:", auth.authenticated)
 no2_results = earthaccess.search_data(
     short_name="OMNO2d",
     temporal=("2024-02-01", "2024-12-31"),
-    count=5
+    count=10
 )
 
 print("Found granules:", len(no2_results))
