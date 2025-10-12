@@ -12,4 +12,3 @@ I am currently a **Grade 11 IB student at Merivale High School**, with strong in
 I enjoy challenging myself with projects that combine **creativity, logic, and technical skills**.  
 
 ## Projects
-{{ wakatimeDoubleCategoryBar "💾 Languages:" wakatimeData.Languages "💼 Projects:" wakatimeData.Projects 5 }}
